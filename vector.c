@@ -21,18 +21,29 @@ void dot(void);
 
 void vector()
 {
-	int menue = 0;
+	char ja[3] = "ja";
+	char Ja[3] = "Ja";
+	char weitereRechnungVec[3] = "ja";
 	
-	printf("\n1 - Betrag eines Vektors in n\n2 - Kreuzprodukt in 3D\n3 - Skalarprodukt in n\n\nBitte wähle eine Operation:\n");
-	scanf("%i", &menue);
-	fflush(stdin);
-	switch(menue)
+	while(strcmp (weitereRechnungVec, ja) == 0 || strcmp (weitereRechnungVec, Ja) == 0)
 	{
-		case 1 : norm(); break;
-		case 2 : cross(); break;
-		case 3 : dot(); break;
+		int menue = 0;
+		
+		printf("\n1 - Betrag eines Vektors in n\n2 - Kreuzprodukt in 3D\n3 - Skalarprodukt in n\n\nBitte wähle eine Operation:\n");
+		scanf("%i", &menue);
+		fflush(stdin);
+		switch(menue)
+		{
+			case 1 : norm(); break;
+			case 2 : cross(); break;
+			case 3 : dot(); break;
+		}
+		return;
+		
+		printf("Willst du eine weitere Rechnung durchfueren? Wenn ja, dann schreibe ja oder Ja.\n");
+		scanf("%s" ,&weitereRechnungVec);
+		fflush(stdin);
 	}
-	return;
 }
 
 void norm(void)
