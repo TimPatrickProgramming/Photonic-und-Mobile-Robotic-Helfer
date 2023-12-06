@@ -1,11 +1,12 @@
-/* main.c
-Beschreibung: Kreuz- und Skalarprodukt
+/* vector.c
+Beschreibung: Kreuz- und Skalarprodukt sowie Betrag eines Vektors.
 Autor: Ramon Tarca, Ryoya Bauer
 Firma: FHGR 
 Version: 1.0 
 Datum: 04.12.2023 
 Änderungen: 
 1.0 04.12.2023 Erste Version 
+2.0 6.12.2023 Einfuegen der while-Schleife
 */
 
 #include <stdio.h>
@@ -32,17 +33,28 @@ void vector()
 		printf("\n1 - Betrag eines Vektors in n\n2 - Kreuzprodukt in 3D\n3 - Skalarprodukt in n\n\nBitte wähle eine Operation:\n");
 		scanf("%i", &menue);
 		fflush(stdin);
+		
 		switch(menue)
 		{
-			case 1 : norm(); break;
-			case 2 : cross(); break;
-			case 3 : dot(); break;
+			case 1 : 
+				norm(); 
+				break;
+			case 2 : 
+				cross(); 
+				break;
+			case 3 : 
+				dot(); 
+				break;
+			default:
+				printf("Der eingegebene Wert ist keinem Programm zugewiesen!\n\n");
+				return;
 		}
-		return;
 		
-		printf("Willst du eine weitere Rechnung durchfueren? Wenn ja, dann schreibe ja oder Ja.\n");
+		printf("Willst du eine weitere Operation mit Vektoren durchfueren? Wenn ja, dann schreibe ja oder Ja.\n");
 		scanf("%s" ,&weitereRechnungVec);
 		fflush(stdin);
+		
+		system("cls");
 	}
 }
 
