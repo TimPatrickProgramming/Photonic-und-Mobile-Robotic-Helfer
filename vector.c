@@ -25,6 +25,7 @@ void vector()
 	
 	printf("\n1 - Betrag eines Vektors in n\n2 - Kreuzprodukt in 3D\n3 - Skalarprodukt in n\n\nBitte wähle eine Operation:\n");
 	scanf("%i", &menue);
+	fflush(stdin);
 	switch(menue)
 	{
 		case 1 : norm(); break;
@@ -39,6 +40,7 @@ void norm(void)
 	int n = 0;
 	printf("\nBitte Dimension wählen:\n");
 	scanf("%i",&n);
+	fflush(stdin);
 	float vector1[n];
 	
 	printf("\nBitte den Vektor abfüllen:\n");
@@ -117,6 +119,7 @@ void dot(void)
 	int n = 0;
 	printf("\nBitte Dimension wählen:\n");
 	scanf("%i",&n);
+	fflush(stdin);
 	float vector1[n], vector2[n];
 	
 	printf("\nBitte den ersten Vektor abfüllen:\n");

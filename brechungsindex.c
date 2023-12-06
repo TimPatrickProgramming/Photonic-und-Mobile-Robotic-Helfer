@@ -10,6 +10,7 @@ void brechungsindex()
 	
 	printf("\nBitte gib die Lichtgeschwindigkeit im Materials an: \n");
     scanf("%f", &cM);
+	fflush(stdin);
 	
     nM = Lichtgeschwindigkeit / cM; 
 		
@@ -17,4 +18,3 @@ void brechungsindex()
 		
     return;
 }
-

@@ -15,10 +15,13 @@ void brechungsgesetz()
 	
 	printf("\nBitte gib einen Winkel Theta 2 an: \n");
     scanf("%lf", &T2);
-	printf("\nBitte gib die Brechzahl des aeusseren Materials an: \n");
+	fflush(stdin);
+	printf("\nBitte gib die Brechzahl des inneren Materials an: \n");
     scanf("%lf", &n1);
-    printf("\nBitte gib die Brechzahl des inneren Materials an: \n");
+	fflush(stdin);
+    printf("\nBitte gib die Brechzahl des aeusseren Materials an: \n");
     scanf("%lf", &n2);
+	fflush(stdin);
 	
 	if(n1 > n2)
 	{

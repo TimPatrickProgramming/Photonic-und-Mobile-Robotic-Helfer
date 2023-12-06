@@ -19,6 +19,7 @@ Datum: 4.12.2023
 #include "elektronikAufgaben.h"
 #include "elektronikFormeln.h"
 #include "vector.h"
+#include "rezepte.h"
 
 // Mit main beginnt das Programm.
 int main(void) 
@@ -46,6 +47,7 @@ int main(void)
 			printf("Fuer Elektronik Aufgaben waehle die 3.\n");
 			printf("Fuer Elektronik Formeln waehle die 4.\n");
 			printf("Fuer Vektorgeometrie Formeln waehle die 5.\n");
+			printf("Fuer Rezepte waehle die 6.\n");
 		}
 		
 		// Abfrage des gewuenschten Fachs.
@@ -71,6 +73,9 @@ int main(void)
 			case 5:
 				vector();
 				break;
+			case 6:
+				rezepte();
+				break;
 			default:
 				printf("Der eingegebene Wert ist keinem Fach zugewiesen!\n\n");
 				break;
@@ -79,6 +84,7 @@ int main(void)
 		// Abfrage ob eine weitere Rechnung durchgefuert werden soll.
 		printf("Willst du eine weitere Rechnung durchfueren? Wenn ja, dann schreibe ja oder Ja.\n");
 		scanf("%s" ,&weitereRechnung);
+		fflush(stdin);
 	}
 	
 	// Praeprozessoranweisung Linux oder Windows?
