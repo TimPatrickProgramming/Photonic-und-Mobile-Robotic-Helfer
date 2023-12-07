@@ -27,17 +27,9 @@ void geom(void)
 	
 	while(strcmp (weitereRechnungGeom, ja) == 0 || strcmp (weitereRechnungGeom, Ja) == 0)
 	{
-		printf("\nWenn du die Zahlen fuer die Formeln sehen willst, dann schreibe Ja oder ja:\n");
-		scanf("%s" ,&reg);
-		fflush(stdin);
-			
-		// Hier wird ueberprueft, ob die Werte fuer die Faecher angezeigt werden sollen und anschliessend geprintet.
-		if(strcmp (reg, ja) == 0 || strcmp (reg, Ja) == 0)
-		{
-			printf("\nFuer den Brechungsindex waehle die 1.\n");
-			printf("Fuer das Brechungsgesetz waehle die 2.\n");
-			printf("Fuer die Totalreflektion waehle die 3.\n");
-		}
+		printf("\nFuer den Brechungsindex waehle die 1.\n");
+		printf("Fuer das Brechungsgesetz waehle die 2.\n");
+		printf("Fuer die Totalreflektion waehle die 3.\n");
 			
 		// Abfrage des gewuenschten Fachs.
 		printf("\nWelche Formel willst du benutzen:\n");
@@ -63,6 +55,8 @@ void geom(void)
 		printf("Willst du eine weitere Rechnung in der geometrischen Optik durchfueren? Wenn ja, dann schreibe ja oder Ja.\n");
 		scanf("%s" ,&weitereRechnungGeom);
 		fflush(stdin);
+		
+		formel = 0;
 		
 		system("cls");
 	}

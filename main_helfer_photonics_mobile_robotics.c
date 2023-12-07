@@ -33,20 +33,12 @@ int main(void)
 	char ja[3] = "ja";
 	char Ja[3] = "Ja";
 	int fach = 0;
-	char reg[3] = "_";
 	char weitereRechnung[3] = "ja";
 	
 	// Durch die While-Schleife kann das Programm mehrmals ausgefuert werden.
 	while(strcmp (weitereRechnung, ja) == 0 || strcmp (weitereRechnung, Ja) == 0)
 	{
-		// Abfrage ob die Werte fuer die jeweiligen Faecher angezeigt werden sollen.
-		printf("\nWenn du die Zahlen fuer die Faecher sehen willst, dann schreibe Ja oder ja:\n");
-		scanf("%s" ,&reg);
-		fflush(stdin);
-		
 		// Hier wird ueberprueft, ob die Werte fuer die Faecher angezeigt werden sollen und anschliessend geprintet.
-		if(strcmp (reg, ja) == 0 || strcmp (reg, Ja) == 0)
-		{
 			printf("\nFuer Geometrische Optik waehle die 1.\n");
 			printf("Fuer Mechanik waehle die 2.\n");
 			printf("Fuer Elektronik Aufgaben waehle die 3.\n");
@@ -54,12 +46,11 @@ int main(void)
 			printf("Fuer Vektorgeometrie Formeln waehle die 5.\n");
 			printf("Fuer Rezepte waehle die 6.\n");
 			printf("Fuer Hangman waehle die 7.\n");
-		}
 		
 		// Abfrage des gewuenschten Fachs.
-		printf("\nWelches Fach willst du bearbeiten:\n");
-		scanf("%i" ,&fach);
-		fflush(stdin);
+			printf("\nWelches Fach willst du bearbeiten:\n");
+			scanf("%i" ,&fach);
+			fflush(stdin);
 		
 		// Aufrufen des gewuenschten Fachs.
 		switch(fach)

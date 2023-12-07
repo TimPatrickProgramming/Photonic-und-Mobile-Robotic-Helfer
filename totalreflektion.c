@@ -25,14 +25,20 @@ void totalreflektion(void) //<=totalreflektion
 	double  ergebnis = 0;  	//Winkel Theta
 	double  val = 0;  		//Zwischenspeicher
 	
-	//Abfrage
-	printf("\nBitte gib eine Brechzahl n1 an: \n");
-    scanf("%lf", &n1);
-	fflush(stdin);
+	while(n1 < 1)
+	{
+		//Abfrage
+		printf("\nBitte gib eine Brechzahl n1 an: \n");
+		scanf("%lf", &n1);
+		fflush(stdin);
+	}
 	
-	printf("\nBitte gib eine Brechzahl n2 an: \n");
-    scanf("%lf", &n2);
-	fflush(stdin);
+	while(n2 < 1)
+	{
+		printf("\nBitte gib eine Brechzahl n2 an: \n");
+		scanf("%lf", &n2);
+		fflush(stdin);
+	}
 
 	//Berechnung
 	if (n1 > n2)
