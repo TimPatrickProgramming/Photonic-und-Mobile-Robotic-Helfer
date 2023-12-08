@@ -32,6 +32,7 @@ Datum: 8.11.2023
     __UNIT__IMPL(E, energy, joul) \
     __UNIT__IMPL(J, current_Density, ampere_per_squaremeter) \
     __UNIT__IMPL(A, conductor_cross_section, square_meters) \
+    __UNIT__IMPL(Q, charge, coulomb) \
 
 // ADD FORMULAS HERE, keywords: PLUS,MINUS,TIMES,DIVISION,POWER,ROOT,LOG
 #define __DO__FORMULAS__IMPL \
@@ -39,6 +40,7 @@ Datum: 8.11.2023
     __FORMULA__IMPL(P, U, TIMES, I) \
     __FORMULA__IMPL(E, P, TIMES, T) \
     __FORMULA__IMPL(I, J, TIMES, A) \
+    __FORMULA__IMPL(Q, I, TIMES, T) \
 
 
 // DO NOT EDIT BELOW THIS LINE
