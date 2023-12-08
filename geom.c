@@ -1,10 +1,21 @@
+/* geom.c
+Das Programm soll ein Helfer fuer Photonics und Mobile Robotics Studenten sein.
+Autor: Julian Walter, York Willmann
+Firma: FHGR
+Version: 0.1
+Datum: 4.12.2023
+Änderungen: 
+1.0_4.12.2023 Erste Version 
+2.0_6.12.2023 Einfuegen der while-Schleife
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include "geom.h"
 #include "brechungsgesetz.h"
 #include "brechungsindex.h"
-#include "formel3.h"
+#include "totalreflektion.h"
 
 void geom(void)
 {
@@ -16,17 +27,9 @@ void geom(void)
 	
 	while(strcmp (weitereRechnungGeom, ja) == 0 || strcmp (weitereRechnungGeom, Ja) == 0)
 	{
-		printf("\nWenn du die Zahlen fuer die Formeln sehen willst, dann schreibe Ja oder ja:\n");
-		scanf("%s" ,&reg);
-		fflush(stdin);
-			
-		// Hier wird ueberprueft, ob die Werte fuer die Faecher angezeigt werden sollen und anschliessend geprintet.
-		if(strcmp (reg, ja) == 0 || strcmp (reg, Ja) == 0)
-		{
-			printf("\nFuer den Brechungsindex waehle die 1.\n");
-			printf("Fuer das Brechungsgesetz waehle die 2.\n");
-			printf("Fuer die dritte Formel waehle die 3.\n");
-		}
+		printf("\nFuer den Brechungsindex waehle die 1.\n");
+		printf("Fuer das Brechungsgesetz waehle die 2.\n");
+		printf("Fuer die Totalreflektion waehle die 3.\n");
 			
 		// Abfrage des gewuenschten Fachs.
 		printf("\nWelche Formel willst du benutzen:\n");
@@ -42,7 +45,7 @@ void geom(void)
 				brechungsgesetz();
 				break;
 			case 3:
-				formel3();
+				totalreflektion();
 				break;			
 			default:
 				printf("Dieser Zahl ist keine Formel zugewiesen!\n\n");
@@ -52,5 +55,10 @@ void geom(void)
 		printf("Willst du eine weitere Rechnung in der geometrischen Optik durchfueren? Wenn ja, dann schreibe ja oder Ja.\n");
 		scanf("%s" ,&weitereRechnungGeom);
 		fflush(stdin);
+		
+		formel = 0;
+		
+		system("cls");
 	}
+	return;
 }

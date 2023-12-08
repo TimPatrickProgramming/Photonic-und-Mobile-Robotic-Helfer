@@ -1,6 +1,6 @@
-/* rezepte.h
+/* hangman.h
 Das Programm soll ein Helfer fuer Photonics und Mobile Robotics Studenten sein.
-Autor: Luca Kreuzen
+Autor: _________, __________, ___________
 Firma: FHGR
 Version: 0.1
 Datum: 4.12.2023
@@ -8,4 +8,4 @@ Datum: 4.12.2023
 1.0_4.12.2023 Erste Version 
 */
 
-void rezepte(void);
+void hangman(void);
