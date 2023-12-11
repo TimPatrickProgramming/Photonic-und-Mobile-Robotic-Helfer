@@ -23,19 +23,22 @@ Datum: 4.12.2023
     __UNIT__IMPL(U, voltage, volt) \
     __UNIT__IMPL(I, current, ampere) \
     __UNIT__IMPL(P, power, watt) \
-    __UNIT__IMPL(T, time, seconds) \
+    __UNIT__IMPL(t, time, seconds) \
     __UNIT__IMPL(E, energy, joul) \
     __UNIT__IMPL(J, current_Density, ampere_per_squaremeter) \
     __UNIT__IMPL(A, conductor_cross_section, square_meters) \
     __UNIT__IMPL(Q, charge, coulomb) \
+    __UNIT__IMPL(T, period_durration, seconds) \
+    __UNIT__IMPL(f, frequenzy, hertz) \
 
 // ADD FORMULAS HERE, keywords: PLUS,MINUS,TIMES,DIVISION,POWER,ROOT,LOG
 #define __DO__FORMULAS__IMPL \
     __FORMULA__IMPL(U, R, TIMES, I) \
     __FORMULA__IMPL(P, U, TIMES, I) \
-    __FORMULA__IMPL(E, P, TIMES, T) \
+    __FORMULA__IMPL(E, P, TIMES, t) \
     __FORMULA__IMPL(I, J, TIMES, A) \
-    __FORMULA__IMPL(Q, I, TIMES, T) \
+    __FORMULA__IMPL(Q, I, TIMES, t) \
+    //__FORMULA__IMPL(T,)
 
 
 // DO NOT EDIT BELOW THIS LINE
